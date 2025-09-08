@@ -1,0 +1,13 @@
+{
+  "name": "bosonit-spec-kit-storybook",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --strictPort --port 5081"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2",
+    "typescript": "^5.5.4"
+  }
+}
