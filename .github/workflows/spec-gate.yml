@@ -1,0 +1,14 @@
+name: Spec Gate
+on:
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify spec and tokens present
+        run: |
+          test -f spec-driven.md || { echo 'Missing spec-driven.md'; exit 1; }
+          test -f design/tokens.json || { echo 'Missing design/tokens.json'; exit 1; }
+          node -e "JSON.parse(require('fs').readFileSync('design/tokens.json','utf8'))" || { echo 'tokens.json invalid JSON'; exit 1; }
