@@ -1,0 +1,9 @@
+/* Spec Kit — Component semantics (baseline) */
+:root{ --focus:#94c7ff4d }
+
+.panel{ background:#0f141a; border:1px solid var(--line); border-radius:var(--radius-md); padding:var(--space-4) }
+.input{ display:inline-block; width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:#0f141a; color:var(--color-fg); font-family:var(--font-sans) }
+.input:focus-visible{ outline:3px solid var(--focus); outline-offset:2px }
+.btn{ display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#001428; font-weight:700; text-decoration:none; border:1px solid transparent }
+.btn--ghost{ background:transparent; border:1px solid var(--line); color:var(--color-fg) }
+.btn:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:8px }

@@ -369,3 +369,7 @@ By embedding these principles into the specification and planning process, SDD e
 This isn't about replacing developers or automating creativity. It's about amplifying human capability by automating mechanical translation. It's about creating a tight feedback loop where specifications, research, and code evolve together, each iteration bringing deeper understanding and better alignment between intent and implementation.
 
 Software development needs better tools for maintaining alignment between intent and implementation. SDD provides the methodology for achieving this alignment through executable specifications that generate code rather than merely guiding it.
+## Change Policy
+- Semantic versioning for tokens/components.
+- Minor versions may add tokens; no breaking rename without major.
+- Document changes in CHANGELOG and Storybook.
