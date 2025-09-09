@@ -1,4 +1,5 @@
 :root{
+  --focus:#94c7ff4d; --link:#b7d9ff; --link-hover:#e3eeff;
   --color-bg:#0b0f13; --color-fg:#e6edf3; --color-muted:#9aa4ad; --line:#1c232b;
   --accent-1:#7fc3ff; --accent-2:#9b7bff; --warn:#ffcc88; --ok:#7fffd4;
   --radius-sm:8px; --radius-md:12px; --radius-lg:16px;
@@ -12,3 +13,8 @@
 .card{ background:#0f141a; border:1px solid var(--line); border-radius:var(--radius-md); padding:var(--space-4) }
 .btn{ display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#001428; font-weight:700; text-decoration:none }
 body{ background:var(--color-bg); color:var(--color-fg); font-family:var(--font-sans) }
+
+/* Accessibility defaults */
+:where(a){ color:var(--link) }
+:where(a:hover){ color:var(--link-hover) }
+:where(a:focus-visible,.btn:focus-visible){ outline:3px solid var(--focus); outline-offset:2px; border-radius:8px }

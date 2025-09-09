@@ -1,0 +1,22 @@
+{
+  "name": "@BosonIT-org/spec-kit-tokens",
+  "version": "0.1.0",
+  "description": "BosonIT Spec Kit design tokens (CSS + JSON)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BosonIT-org/Bosonit-spec-kit.git"
+  },
+  "license": "UNLICENSED",
+  "author": "BosonIT",
+  "files": [
+    "design/tokens.css",
+    "design/tokens.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "design/tokens.json",
+  "style": "design/tokens.css",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
