@@ -12,7 +12,8 @@
       .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:16px }
       .token{ display:flex; justify-content:space-between; border:1px dashed var(--line); padding:8px 10px; border-radius:8px }
     </style>
-  </head>
+      <link rel="stylesheet" href="../components.css" />
+</head>
   <body>
     <div class="shell">
       <header>
@@ -26,7 +27,8 @@
           <div class="token"><span>accent-1</span><span style="background:var(--accent-1); width:24px; height:16px; display:inline-block"></span></div>
           <div class="token"><span>accent-2</span><span style="background:var(--accent-2); width:24px; height:16px; display:inline-block"></span></div>
         </div>
-      </section>
+              <div class="card"><h3>Input</h3><input class="input" placeholder="Placeholder"/></div>
+</section>
     </div>
     <script type="module" src="./src/main.ts"></script>
   </body>
