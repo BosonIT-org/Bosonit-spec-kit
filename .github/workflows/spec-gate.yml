@@ -2,11 +2,17 @@ name: Spec Gate
 on:
   pull_request:
     branches: [ main, master ]
+permissions:
+  contents: read
 jobs:
   gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify GitHub workflow governance
+        run: |
+          python3 scripts/validate_github_workflow_governance.py
+          python3 -m unittest discover -s tests -p 'test_workflow_governance.py'
       - name: Verify spec and tokens present
         run: |
           test -f spec-driven.md || { echo 'Missing spec-driven.md'; exit 1; }
